@@ -1,0 +1,10 @@
+<%= month_calendar events: @events do |date, events| %>
+  <%= date %>
+
+  <% events.each do |event| %>
+    <div class="fc-event">
+      <span><%= link_to event.name[0..30], event.vanity_url %></span>
+    </div>
+  <% end %>
+
+<% end %>
